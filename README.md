@@ -39,6 +39,8 @@ GitHub asks for the Pages source. Expected URL:
   signed end-user installer is not available yet.
 - AX1 source is not yet published as a public download; the Mini setup steps
   are for contributors who have been given the source checkout.
+- AX1 Mini is publicly presented as a command-line product. A graphical desktop
+  client is a future direction, not part of the current Mini release.
 - The site's AX1 Pro section is explicitly labeled as a roadmap, not a shipping
   feature list.
 - Keep the public website repository limited to these static site files. Never
@@ -46,6 +48,6 @@ GitHub asks for the Pages source. Expected URL:
   source to it.
 - The website source is public for Pages deployment; publication does not grant
   a license to reuse AX1 branding or product materials.
-- AX1 can be branded as the setup experience, but the installer should disclose
-  Ollama when it installs that runtime and identify the third-party models it
-  downloads.
+- Optional third-party runtime setup must require explicit user consent. Keep
+  third-party model licensing distinct from models developed by ARYAVAX
+  Technologies.

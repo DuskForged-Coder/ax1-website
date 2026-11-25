@@ -4,10 +4,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#080b11">
-    <meta name="description" content="Meet AX1 Mini: a local-first intelligence workspace for thinking, building, and working with your projects.">
+    <meta name="description" content="Meet AX1 Mini: a local-first command-line AI assistant for thinking, building, and working with your projects.">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'">
     <meta property="og:title" content="AX1 — Intelligence, in your hands">
-    <meta property="og:description" content="A thoughtful local AI workspace from ARYAVAX Neuro-X.">
+    <meta property="og:description" content="A thoughtful local-first command-line AI assistant from ARYAVAX Technologies.">
     <meta property="og:type" content="website">
     <title>AX1 — Intelligence, in your hands</title>
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -41,7 +41,7 @@
         <div class="hero-copy" data-reveal>
           <p class="eyebrow"><span class="pulse-dot"></span> LOCAL-FIRST INTELLIGENCE</p>
           <h1>Think clearly.<br><em>Build boldly.</em></h1>
-          <p class="hero-lede">Meet AX1: a practical AI workspace that helps you understand ideas, work with projects, and turn plans into progress.</p>
+          <p class="hero-lede">Meet AX1 Mini: a practical command-line AI assistant that helps you understand ideas, work with projects, and turn plans into progress.</p>
           <div class="hero-actions">
             <a class="button button-primary" href="#install">Explore AX1 Mini <span aria-hidden="true">↗</span></a>
             <a class="text-link" href="#experience">See how it works <span aria-hidden="true">↓</span></a>
@@ -112,15 +112,15 @@
       <section class="local section-space" id="local">
         <div class="local-inner section-shell">
           <div class="local-visual" data-reveal data-depth="0.12"><div class="local-rings"><i></i><i></i><i></i></div><div class="local-chip"><span>LOCAL</span><b>100%</b><small>YOUR DEVICE</small></div><div class="local-spark spark-one"></div><div class="local-spark spark-two"></div></div>
-          <div class="local-copy" data-reveal><p class="eyebrow">A QUIETER KIND OF AI <span> / 03</span></p><h2>Private work<br>feels <em>different.</em></h2><p>AX1 is designed to run with local model runtimes. Your prompts go to the model on your computer when local inference is selected. No account is required for the local workflow.</p><p class="fine-print">Runtime and model downloads require an internet connection. The current desktop setup uses Ollama; setup screens should identify this clearly and show what will be installed.</p><a class="text-link" href="#install">See the install steps <span aria-hidden="true">↗</span></a></div>
+          <div class="local-copy" data-reveal><p class="eyebrow">A QUIETER KIND OF AI <span> / 03</span></p><h2>Private work<br>feels <em>different.</em></h2><p>AX1 can run with local model providers. When you select local inference, prompts are processed by a model on your computer. No AX1 cloud account is required for that workflow.</p><p class="fine-print">Provider behavior and data handling vary. Review the provider's terms and setup details before connecting it to AX1.</p><a class="text-link" href="#install">See the install steps <span aria-hidden="true">↗</span></a></div>
         </div>
       </section>
 
       <section class="install section-shell section-space" id="install">
-        <div class="install-heading" data-reveal><p class="eyebrow">START WITH MINI <span> / 04</span></p><h2>Make room for<br><em>good ideas.</em></h2><p class="section-intro">Choose your operating system for the correct setup commands. A source checkout is required today; public one-click installers are not released yet.</p></div>
+        <div class="install-heading" data-reveal><p class="eyebrow">START WITH MINI <span> / 04</span></p><h2>Make room for<br><em>good ideas.</em></h2><p class="section-intro">AX1 Mini is a command-line product. Choose your operating system for the CLI setup commands. A graphical desktop client is a future direction.</p></div>
         <div class="install-layout">
           <div class="install-content" data-reveal>
-            <p class="install-source-note"><strong>Before you start:</strong> these commands need an authorized AX1 source checkout and must be run from its <code>AX1-Intelligence</code> folder. AX1 source and signed installers are not currently available as public downloads on this site.</p>
+            <p class="install-source-note"><strong>Before you start:</strong> these commands need an authorized AX1 source checkout and must be run from its <code>AX1-Intelligence</code> folder. AX1 source and signed CLI installers are not currently available as public downloads on this site.</p>
             <div class="platform-tabs" role="tablist" aria-label="Choose your operating system">
               <button class="platform-tab" id="tab-windows" type="button" role="tab" aria-selected="false" aria-controls="panel-windows" tabindex="-1" data-install-tab="windows">Windows</button>
               <button class="platform-tab" id="tab-macos" type="button" role="tab" aria-selected="true" aria-controls="panel-macos" tabindex="0" data-install-tab="macos">macOS</button>
@@ -129,32 +129,32 @@
             <section class="platform-panel" id="panel-windows" role="tabpanel" aria-labelledby="tab-windows" data-install-panel="windows" hidden>
               <p class="platform-requirement">Windows 10 or newer · Python 3.10+ from python.org</p>
               <article class="install-step"><span>01</span><div><h3>Create an isolated environment</h3><div class="code-copy"><code>py -3 -m venv .venv</code><button type="button" data-copy="py -3 -m venv .venv" aria-label="Copy Windows environment command">Copy</button></div></div></article>
-              <article class="install-step"><span>02</span><div><h3>Install AX1 Mini</h3><div class="code-copy"><code>.\.venv\Scripts\python.exe -m pip install -e ".[desktop]"</code><button type="button" data-copy=".\.venv\Scripts\python.exe -m pip install -e &quot;.[desktop]&quot;" aria-label="Copy Windows install command">Copy</button></div></div></article>
-              <article class="install-step"><span>03</span><div><h3>Launch</h3><div class="code-copy"><code>.\.venv\Scripts\ax1-desktop.exe</code><button type="button" data-copy=".\.venv\Scripts\ax1-desktop.exe" aria-label="Copy Windows launch command">Copy</button></div></div></article>
+              <article class="install-step"><span>02</span><div><h3>Install AX1 Mini CLI</h3><div class="code-copy"><code>.\.venv\Scripts\python.exe -m pip install -e .</code><button type="button" data-copy=".\.venv\Scripts\python.exe -m pip install -e ." aria-label="Copy Windows install command">Copy</button></div></div></article>
+              <article class="install-step"><span>03</span><div><h3>Start AX1 Mini</h3><div class="code-copy"><code>.\.venv\Scripts\ax1.exe</code><button type="button" data-copy=".\.venv\Scripts\ax1.exe" aria-label="Copy Windows launch command">Copy</button></div></div></article>
             </section>
             <section class="platform-panel" id="panel-macos" role="tabpanel" aria-labelledby="tab-macos" data-install-panel="macos">
               <p class="platform-requirement">macOS · Python 3.10+ · Apple Silicon or Intel</p>
               <article class="install-step"><span>01</span><div><h3>Create an isolated environment</h3><div class="code-copy"><code>python3 -m venv .venv</code><button type="button" data-copy="python3 -m venv .venv" aria-label="Copy macOS environment command">Copy</button></div></div></article>
-              <article class="install-step"><span>02</span><div><h3>Install AX1 Mini</h3><div class="code-copy"><code>.venv/bin/python -m pip install -e ".[desktop]"</code><button type="button" data-copy=".venv/bin/python -m pip install -e &quot;.[desktop]&quot;" aria-label="Copy macOS install command">Copy</button></div></div></article>
-              <article class="install-step"><span>03</span><div><h3>Launch</h3><div class="code-copy"><code>.venv/bin/ax1-desktop</code><button type="button" data-copy=".venv/bin/ax1-desktop" aria-label="Copy macOS launch command">Copy</button></div></div></article>
+              <article class="install-step"><span>02</span><div><h3>Install AX1 Mini CLI</h3><div class="code-copy"><code>.venv/bin/python -m pip install -e .</code><button type="button" data-copy=".venv/bin/python -m pip install -e ." aria-label="Copy macOS install command">Copy</button></div></div></article>
+              <article class="install-step"><span>03</span><div><h3>Start AX1 Mini</h3><div class="code-copy"><code>.venv/bin/ax1</code><button type="button" data-copy=".venv/bin/ax1" aria-label="Copy macOS launch command">Copy</button></div></div></article>
             </section>
             <section class="platform-panel" id="panel-linux" role="tabpanel" aria-labelledby="tab-linux" data-install-panel="linux" hidden>
-              <p class="platform-requirement">64-bit Linux desktop · Python 3.10+ · X11 or Wayland</p>
+              <p class="platform-requirement">64-bit Linux · Python 3.10+</p>
               <article class="install-step"><span>01</span><div><h3>Create an isolated environment</h3><div class="code-copy"><code>python3 -m venv .venv</code><button type="button" data-copy="python3 -m venv .venv" aria-label="Copy Linux environment command">Copy</button></div></div></article>
-              <article class="install-step"><span>02</span><div><h3>Install AX1 Mini</h3><div class="code-copy"><code>.venv/bin/python -m pip install -e ".[desktop]"</code><button type="button" data-copy=".venv/bin/python -m pip install -e &quot;.[desktop]&quot;" aria-label="Copy Linux install command">Copy</button></div></div></article>
-              <article class="install-step"><span>03</span><div><h3>Launch</h3><div class="code-copy"><code>.venv/bin/ax1-desktop</code><button type="button" data-copy=".venv/bin/ax1-desktop" aria-label="Copy Linux launch command">Copy</button></div></div></article>
-              <p class="platform-note">If Qt reports a missing system library, install the matching package for your distribution using <a href="https://doc.qt.io/qtforpython-6/overviews/qtdoc-linux-requirements.html" target="_blank" rel="noreferrer">Qt's Linux requirements guide</a>. Ollama setup on Linux currently opens <a href="https://ollama.com/download/linux" target="_blank" rel="noreferrer">Ollama's official Linux instructions</a>; AX1 does not install it automatically there.</p>
+              <article class="install-step"><span>02</span><div><h3>Install AX1 Mini CLI</h3><div class="code-copy"><code>.venv/bin/python -m pip install -e .</code><button type="button" data-copy=".venv/bin/python -m pip install -e ." aria-label="Copy Linux install command">Copy</button></div></div></article>
+              <article class="install-step"><span>03</span><div><h3>Start AX1 Mini</h3><div class="code-copy"><code>.venv/bin/ax1</code><button type="button" data-copy=".venv/bin/ax1" aria-label="Copy Linux launch command">Copy</button></div></div></article>
+              <p class="platform-note">AX1 runs in your terminal. Model providers and runtime components are configured separately; no single third-party runtime is required by these CLI install steps.</p>
             </section>
-            <p class="platform-model-note">After launch, review the local runtime setup and model download details. The current desktop app offers a fixed model list; hardware-based recommendations are planned.</p>
+            <p class="platform-model-note">Model availability, hardware fit, ownership, and licensing vary by model and provider.</p>
           </div>
           <aside class="install-card" data-reveal data-depth="0.1"><div class="install-card-top"><span class="status-led"></span> AX1 MINI <span class="edition-tag">STARTER EDITION</span></div><h3>Your toolkit,<br>ready to move.</h3><ul><li><span>✓</span> Local-first assistant</li><li><span>✓</span> Project analysis and search</li><li><span>✓</span> Memory controls</li><li><span>✓</span> 13+ registered tools*</li></ul><p>*Available tools depend on runtime configuration and edition.</p><a class="button button-outline" href="#roadmap">See the roadmap <span aria-hidden="true">↗</span></a></aside>
         </div>
-        <p class="install-disclosure" data-reveal><span>i</span><span><strong>Transparent setup, always.</strong> On Windows and macOS, AX1 asks before installing Ollama through a supported package manager. On Linux, follow Ollama's official setup instructions. Model files are third-party weights, not AX1-created models.</span></p>
+        <p class="install-disclosure" data-reveal><span>i</span><span><strong>Transparent setup, always.</strong> AX1 may offer optional installation of supported third-party runtime components through compatible package managers during setup, only with your explicit consent and never silently. AX1 supports both third-party AI models and independently developed models created by ARYAVAX Technologies. Each model remains subject to its respective ownership and licensing terms. AX1 is an independently developed AI platform by ARYAVAX Technologies.</span></p>
       </section>
 
       <section class="roadmap section-space" id="roadmap">
         <div class="roadmap-inner section-shell">
-          <div class="roadmap-copy" data-reveal><p class="eyebrow">THE NEXT HORIZON <span> / 05</span></p><h2>More depth.<br><em>More room to create.</em></h2><p>AX1 Pro is a future product direction, not a feature set promised by the current Mini app. The roadmap explores deeper project intelligence, more capable coding workflows, expanded memory, and stronger verification.</p><a class="text-link" href="#top">Back to the beginning <span aria-hidden="true">↑</span></a></div>
+          <div class="roadmap-copy" data-reveal><p class="eyebrow">THE NEXT HORIZON <span> / 05</span></p><h2>More depth.<br><em>More room to create.</em></h2><p>AX1 Mini is a command-line product today. A graphical desktop client is a future direction, alongside deeper project intelligence, more capable coding workflows, expanded memory, and stronger verification.</p><a class="text-link" href="#top">Back to the beginning <span aria-hidden="true">↑</span></a></div>
           <div class="pro-object" data-reveal data-depth="0.16"><div class="pro-backplate"></div><div class="pro-ring pro-ring-a"></div><div class="pro-ring pro-ring-b"></div><div class="pro-glass"><span>AX1</span><b>PRO</b><small>ROADMAP / IN DEVELOPMENT</small></div><div class="pro-orbit-tag tag-one">AGENT WORKFLOWS</div><div class="pro-orbit-tag tag-two">DEEPER CONTEXT</div><div class="pro-orbit-tag tag-three">STRONGER CHECKS</div></div>
         </div>
         <div class="roadmap-note section-shell" data-reveal><span class="roadmap-star">✳</span><span>Designed with ambition. Shipped only when it is ready.</span><span class="roadmap-line"></span></div>
