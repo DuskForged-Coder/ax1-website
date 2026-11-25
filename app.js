@@ -21,6 +21,37 @@
     });
   }
 
+  const installTabs = [...document.querySelectorAll("[data-install-tab]")];
+  const installPanels = [...document.querySelectorAll("[data-install-panel]")];
+  const selectInstallPlatform = (platform, moveFocus = false) => {
+    installTabs.forEach((tab) => {
+      const selected = tab.dataset.installTab === platform;
+      tab.setAttribute("aria-selected", String(selected));
+      tab.tabIndex = selected ? 0 : -1;
+      if (selected && moveFocus) tab.focus();
+    });
+    installPanels.forEach((panel) => {
+      panel.hidden = panel.dataset.installPanel !== platform;
+    });
+  };
+  installTabs.forEach((tab, index) => {
+    tab.addEventListener("click", () => selectInstallPlatform(tab.dataset.installTab));
+    tab.addEventListener("keydown", (event) => {
+      let next = index;
+      if (event.key === "ArrowRight") next = (index + 1) % installTabs.length;
+      else if (event.key === "ArrowLeft") next = (index - 1 + installTabs.length) % installTabs.length;
+      else if (event.key === "Home") next = 0;
+      else if (event.key === "End") next = installTabs.length - 1;
+      else return;
+      event.preventDefault();
+      selectInstallPlatform(installTabs[next].dataset.installTab, true);
+    });
+  });
+  const detectedPlatform = (navigator.userAgentData?.platform || navigator.platform || "").toLowerCase();
+  if (detectedPlatform.includes("win")) selectInstallPlatform("windows");
+  else if (detectedPlatform.includes("linux")) selectInstallPlatform("linux");
+  else if (detectedPlatform.includes("mac")) selectInstallPlatform("macos");
+
   const revealItems = document.querySelectorAll("[data-reveal]");
   if (reducedMotion || !("IntersectionObserver" in window)) {
     revealItems.forEach((item) => item.classList.add("revealed"));

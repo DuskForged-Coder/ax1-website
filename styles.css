@@ -153,7 +153,22 @@ h2 { margin-bottom: 23px; font-size: clamp(2.8rem, 5.2vw, 5rem); line-height: .9
 .local-copy .text-link { margin-top: 18px; }
 .install-heading { display: grid; grid-template-columns: 1fr .72fr; align-items: end; gap: 40px; margin-bottom: 64px; }.install-heading .eyebrow, .install-heading h2 { grid-column: 1; }.install-heading .section-intro { grid-column: 2; grid-row: 2; margin-bottom: 10px; }
 .install-layout { display: grid; grid-template-columns: 1.2fr .8fr; align-items: start; gap: 9vw; }
-.install-steps { border-top: 1px solid var(--line); }
+.install-content { min-width: 0; }
+.install-source-note { margin: 0 0 17px; color: #8995a4; font-size: .7rem; line-height: 1.7; }
+.install-source-note code { color: var(--cyan); font: .68rem var(--mono); }
+.platform-tabs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin-bottom: 20px; padding: 5px; border: 1px solid var(--line); background: #0a0f16; }
+.platform-tab { padding: 11px 8px; border: 1px solid transparent; background: transparent; color: #8d99a8; cursor: pointer; font-size: .72rem; transition: color .2s, background .2s, border-color .2s; }
+.platform-tab:hover { color: var(--ink); }
+.platform-tab[aria-selected="true"] { border-color: rgba(115,226,231,.3); background: rgba(115,226,231,.08); color: var(--cyan); }
+.platform-panel { border-top: 1px solid var(--line); }
+.platform-panel[hidden] { display: none; }
+.platform-requirement { margin: 15px 0 0; color: #8794a3; font: .57rem var(--mono); letter-spacing: .05em; }
+.platform-panel .install-step { grid-template-columns: 38px 1fr; gap: 10px; padding: 18px 0; }
+.platform-panel .install-step h3 { font-size: .82rem; }
+.platform-note, .platform-model-note { color: #8793a2; font-size: .68rem; line-height: 1.75; }
+.platform-note { margin: 17px 0 0; padding: 13px 14px; border-left: 1px solid rgba(115,226,231,.4); background: rgba(115,226,231,.035); }
+.platform-note a { color: var(--cyan); text-decoration: underline; text-underline-offset: 3px; }
+.platform-model-note { margin: 20px 0 0; }
 .install-step { display: grid; grid-template-columns: 52px 1fr; gap: 16px; padding: 24px 0 27px; border-bottom: 1px solid var(--line); }
 .install-step > span { padding-top: 3px; color: var(--cyan); font: .63rem var(--mono); }
 .install-step h3 { margin-bottom: 8px; font-size: .91rem; font-weight: 600; }.install-step p { max-width: 570px; margin: 0; color: #8f9aaa; font-size: .76rem; line-height: 1.75; }.install-step code { font: .71rem var(--mono); }
@@ -193,7 +208,7 @@ h2 { margin-bottom: 23px; font-size: clamp(2.8rem, 5.2vw, 5rem); line-height: .9
   .workflow-scene { grid-template-columns: 1fr 1fr; gap: 10px; }.workflow-card { min-height: 175px; padding: 18px 14px; }.step-symbol { margin-bottom: 23px; }.workflow-card p { font-size: .67rem; }.workflow-note { font-size: .6rem; }
   .capabilities { padding-top: 15px; }.capability-grid { grid-template-columns: 1fr; gap: 13px; }.capability-large { grid-row: auto; }.capability-wide { min-height: auto; }.capability-art, .capability-large .capability-art { height: 230px; }.project-window { height: 205px; }.window-code { padding: 20px 15px; gap: 12px 8px; font-size: .55rem; }
   .local-inner { grid-template-columns: 1fr; gap: 9px; }.local-visual { min-height: 330px; order: 2; }.local-rings { width: 285px; height: 285px; }.local-copy { order: 1; }.local-chip { width: 160px; height: 160px; }.local-chip b { font-size: 2.1rem; }
-  .install-heading { display: block; margin-bottom: 40px; }.install-heading .section-intro { margin-top: 0; }.install-layout { grid-template-columns: 1fr; gap: 42px; }.install-step { grid-template-columns: 35px 1fr; gap: 8px; }.install-step h3 { font-size: .84rem; }.install-step p { font-size: .7rem; }.code-copy { padding: 10px; }.code-copy code { font-size: .58rem; }.install-card { transform: none; }.install-card h3 { font-size: 1.8rem; }
+  .install-heading { display: block; margin-bottom: 40px; }.install-heading .section-intro { margin-top: 0; }.install-layout { grid-template-columns: 1fr; gap: 42px; }.install-step { grid-template-columns: 35px 1fr; gap: 8px; }.install-step h3 { font-size: .84rem; }.install-step p { font-size: .7rem; }.platform-panel .install-step { grid-template-columns: 31px 1fr; gap: 6px; }.platform-tab { font-size: .65rem; }.code-copy { padding: 10px; }.code-copy code { font-size: .58rem; }.install-card { transform: none; }.install-card h3 { font-size: 1.8rem; }
   .roadmap-inner { grid-template-columns: 1fr; gap: 28px; }.pro-object { min-height: 400px; }.pro-glass { width: 195px; height: 260px; }.pro-glass span { font-size: 4rem; }.pro-backplate { width: 255px; height: 325px; }.pro-ring { width: 330px; height: 130px; }.pro-ring-b { width: 300px; height: 270px; }.tag-one { left: -1%; }.tag-two { right: -1%; }.roadmap-note { align-items: flex-start; line-height: 1.6; }.roadmap-line { display: none; }
   .site-footer { grid-template-columns: auto 1fr auto; gap: 15px; padding-block: 28px; }.site-footer > p { font-size: .6rem; }.footer-links { grid-column: 1 / 3; grid-row: 2; gap: 18px; }.back-top { grid-column: 3; grid-row: 1 / 3; }
 }

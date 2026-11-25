@@ -117,17 +117,39 @@
       </section>
 
       <section class="install section-shell section-space" id="install">
-        <div class="install-heading" data-reveal><p class="eyebrow">START WITH MINI <span> / 04</span></p><h2>Make room for<br><em>good ideas.</em></h2><p class="section-intro">AX1 Mini can be installed from the project source today. A signed consumer installer is a separate release step and is not available yet.</p></div>
+        <div class="install-heading" data-reveal><p class="eyebrow">START WITH MINI <span> / 04</span></p><h2>Make room for<br><em>good ideas.</em></h2><p class="section-intro">Choose your operating system for the correct setup commands. A source checkout is required today; public one-click installers are not released yet.</p></div>
         <div class="install-layout">
-          <div class="install-steps" data-reveal>
-            <article class="install-step"><span>01</span><div><h3>Prepare your computer</h3><p>Use macOS or Windows with Python 3.10 or newer. Leave enough free disk space for the model you choose.</p></div></article>
-            <article class="install-step"><span>02</span><div><h3>Open the AX1 source folder</h3><p>In Terminal, go to the provided source checkout and enter <code>AX1-Intelligence</code>.</p></div></article>
-            <article class="install-step"><span>03</span><div><h3>Install the desktop app</h3><div class="code-copy"><code>python3 -m pip install -e "[desktop]"</code><button type="button" data-copy="python3 -m pip install -e &quot;[desktop]&quot;" aria-label="Copy install command">Copy</button></div></div></article>
-            <article class="install-step"><span>04</span><div><h3>Launch AX1 Mini</h3><div class="code-copy"><code>ax1-desktop</code><button type="button" data-copy="ax1-desktop" aria-label="Copy launch command">Copy</button></div><p>Choose local runtime setup and review the Ollama and model download details. AX1 currently offers a fixed model list; hardware-based model recommendations are planned.</p></div></article>
+          <div class="install-content" data-reveal>
+            <p class="install-source-note"><strong>Before you start:</strong> these commands need an authorized AX1 source checkout and must be run from its <code>AX1-Intelligence</code> folder. AX1 source and signed installers are not currently available as public downloads on this site.</p>
+            <div class="platform-tabs" role="tablist" aria-label="Choose your operating system">
+              <button class="platform-tab" id="tab-windows" type="button" role="tab" aria-selected="false" aria-controls="panel-windows" tabindex="-1" data-install-tab="windows">Windows</button>
+              <button class="platform-tab" id="tab-macos" type="button" role="tab" aria-selected="true" aria-controls="panel-macos" tabindex="0" data-install-tab="macos">macOS</button>
+              <button class="platform-tab" id="tab-linux" type="button" role="tab" aria-selected="false" aria-controls="panel-linux" tabindex="-1" data-install-tab="linux">Linux</button>
+            </div>
+            <section class="platform-panel" id="panel-windows" role="tabpanel" aria-labelledby="tab-windows" data-install-panel="windows" hidden>
+              <p class="platform-requirement">Windows 10 or newer · Python 3.10+ from python.org</p>
+              <article class="install-step"><span>01</span><div><h3>Create an isolated environment</h3><div class="code-copy"><code>py -3 -m venv .venv</code><button type="button" data-copy="py -3 -m venv .venv" aria-label="Copy Windows environment command">Copy</button></div></div></article>
+              <article class="install-step"><span>02</span><div><h3>Install AX1 Mini</h3><div class="code-copy"><code>.\.venv\Scripts\python.exe -m pip install -e ".[desktop]"</code><button type="button" data-copy=".\.venv\Scripts\python.exe -m pip install -e &quot;.[desktop]&quot;" aria-label="Copy Windows install command">Copy</button></div></div></article>
+              <article class="install-step"><span>03</span><div><h3>Launch</h3><div class="code-copy"><code>.\.venv\Scripts\ax1-desktop.exe</code><button type="button" data-copy=".\.venv\Scripts\ax1-desktop.exe" aria-label="Copy Windows launch command">Copy</button></div></div></article>
+            </section>
+            <section class="platform-panel" id="panel-macos" role="tabpanel" aria-labelledby="tab-macos" data-install-panel="macos">
+              <p class="platform-requirement">macOS · Python 3.10+ · Apple Silicon or Intel</p>
+              <article class="install-step"><span>01</span><div><h3>Create an isolated environment</h3><div class="code-copy"><code>python3 -m venv .venv</code><button type="button" data-copy="python3 -m venv .venv" aria-label="Copy macOS environment command">Copy</button></div></div></article>
+              <article class="install-step"><span>02</span><div><h3>Install AX1 Mini</h3><div class="code-copy"><code>.venv/bin/python -m pip install -e ".[desktop]"</code><button type="button" data-copy=".venv/bin/python -m pip install -e &quot;.[desktop]&quot;" aria-label="Copy macOS install command">Copy</button></div></div></article>
+              <article class="install-step"><span>03</span><div><h3>Launch</h3><div class="code-copy"><code>.venv/bin/ax1-desktop</code><button type="button" data-copy=".venv/bin/ax1-desktop" aria-label="Copy macOS launch command">Copy</button></div></div></article>
+            </section>
+            <section class="platform-panel" id="panel-linux" role="tabpanel" aria-labelledby="tab-linux" data-install-panel="linux" hidden>
+              <p class="platform-requirement">64-bit Linux desktop · Python 3.10+ · X11 or Wayland</p>
+              <article class="install-step"><span>01</span><div><h3>Create an isolated environment</h3><div class="code-copy"><code>python3 -m venv .venv</code><button type="button" data-copy="python3 -m venv .venv" aria-label="Copy Linux environment command">Copy</button></div></div></article>
+              <article class="install-step"><span>02</span><div><h3>Install AX1 Mini</h3><div class="code-copy"><code>.venv/bin/python -m pip install -e ".[desktop]"</code><button type="button" data-copy=".venv/bin/python -m pip install -e &quot;.[desktop]&quot;" aria-label="Copy Linux install command">Copy</button></div></div></article>
+              <article class="install-step"><span>03</span><div><h3>Launch</h3><div class="code-copy"><code>.venv/bin/ax1-desktop</code><button type="button" data-copy=".venv/bin/ax1-desktop" aria-label="Copy Linux launch command">Copy</button></div></div></article>
+              <p class="platform-note">If Qt reports a missing system library, install the matching package for your distribution using <a href="https://doc.qt.io/qtforpython-6/overviews/qtdoc-linux-requirements.html" target="_blank" rel="noreferrer">Qt's Linux requirements guide</a>. Ollama setup on Linux currently opens <a href="https://ollama.com/download/linux" target="_blank" rel="noreferrer">Ollama's official Linux instructions</a>; AX1 does not install it automatically there.</p>
+            </section>
+            <p class="platform-model-note">After launch, review the local runtime setup and model download details. The current desktop app offers a fixed model list; hardware-based recommendations are planned.</p>
           </div>
           <aside class="install-card" data-reveal data-depth="0.1"><div class="install-card-top"><span class="status-led"></span> AX1 MINI <span class="edition-tag">STARTER EDITION</span></div><h3>Your toolkit,<br>ready to move.</h3><ul><li><span>✓</span> Local-first assistant</li><li><span>✓</span> Project analysis and search</li><li><span>✓</span> Memory controls</li><li><span>✓</span> 13+ registered tools*</li></ul><p>*Available tools depend on runtime configuration and edition.</p><a class="button button-outline" href="#roadmap">See the roadmap <span aria-hidden="true">↗</span></a></aside>
         </div>
-        <p class="install-disclosure" data-reveal><span>i</span><span><strong>Transparent setup, always.</strong> The desktop app currently offers to install Ollama through a supported package manager after you choose setup. It does not silently install it. Model files are third-party weights, not AX1-created models.</span></p>
+        <p class="install-disclosure" data-reveal><span>i</span><span><strong>Transparent setup, always.</strong> On Windows and macOS, AX1 asks before installing Ollama through a supported package manager. On Linux, follow Ollama's official setup instructions. Model files are third-party weights, not AX1-created models.</span></p>
       </section>
 
       <section class="roadmap section-space" id="roadmap">
