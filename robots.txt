@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://duskforged-coder.github.io/ax1-website/sitemap.xml
